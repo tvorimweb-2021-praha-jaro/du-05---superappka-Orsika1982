@@ -30,4 +30,157 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ----- zde začni psát vlastní CSS ----- */
+.header {
+    color: #48418e;
+    display: flex;
+    justify-content: start;
+    margin: 0;
+}
+.header-navigation1,
+.header-navigation2 {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+a {
+    padding: 1rem;
+    text-decoration: none;
+}
+
+a:hover {
+ background-color: #25133d;
+ color: white;
+}
+
+.superappka {
+    text-decoration: none;
+    font-weight: 800;
+    color: #25133d;
+}
+
+.main {
+    background-image: url(images/pozadi.jpg);
+    color: white;
+    margin: 0;
+    font-weight: 200;
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 1rem;
+}
+h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin: 0;
+    padding: 1rem;
+    max-width: 80%;
+}
+
+.footer {
+    background-color: #48418e;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.sub-navigation {
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.sub-navigation1 {
+    background-color: #48418e;
+    border-radius: 5%;
+    border: white solid 1px;
+    color: white;
+    margin: 1rem 2rem;
+    overflow: ;
+}
+
+.sub-navigation1:hover {
+    background-color: transparent;
+    border: white solid 0.1px;
+}
+
+.sub-navigation2 {
+    border-radius: 5%;
+    border: white solid 1px;
+    color: white;
+    margin: 1rem 2rem;
+}
+.sub-navigation2:hover {
+    background-color: #48418e;
+    border: 0;
+}
+img {
+    width: 10%;
+    height: 10%;
+    padding-top: 2rem;
+}
+.sub {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    color: #48418e;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+p {
+    font-size: 1rem;
+}
+.travel,
+.chat,
+.experience {
+    text-align: center;
+    padding: 2rem;
+}
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+@media screen and (min-width: 480px) {
+    .sub {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .travel,
+    .chat,
+    .experience {
+        padding: 2rem;
+    }
+
+    img {
+        width: 30%;
+        height: 30%;
+    }
+    .sub-navigation {
+        display: flex;
+        flex-direction: row;
+    }
+    .header-navigation {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .main {
+        background-image: url(images/pozadi.jpg), url(images/telefon.png);
+        background-repeat: no-repeat;
+        background-position: left, right;
+        background-blend-mode: hue;
+        background-size: cover, 30%;
+    }
+}
