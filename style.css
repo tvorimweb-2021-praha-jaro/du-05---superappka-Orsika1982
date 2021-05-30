@@ -1,17 +1,8 @@
-/* nejsme vcerejsi, pouzivame moderni box model */
+
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
 
-/*
- BARVY
- sede pozadi      #e5e5e5
- svetle fialova   #48418e
- tmave fialova    #25133d
 
- POUZITE PISMO
- Source Sans Pro - rezy pisma light 300, regular 400 a bold 700
- https://fonts.google.com/specimen/Roboto
-*/
 
 body {
     padding: 0;
@@ -19,168 +10,233 @@ body {
     background-color: #e5e5e5;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
 .obal {
-    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
-    margin: 0 auto; /* pruh je na stránce vycentrovaný */
+    margin: 0 auto; 
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.header {
-    color: #48418e;
-    display: flex;
-    justify-content: start;
-    margin: 0;
-}
-.header-navigation1,
-.header-navigation2 {
-    display: flex;
-    flex-direction: row;
-    margin: 1rem;
-}
-
-a {
-    padding: 1rem;
-    text-decoration: none;
-}
-
-a:hover {
- background-color: #25133d;
- color: white;
-}
-
-.superappka {
-    text-decoration: none;
-    font-weight: 800;
-    color: #25133d;
-}
-
-.main {
-    background-image: url(images/pozadi.jpg);
-    color: white;
-    margin: 0;
-    font-weight: 200;
+ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
+.headernav {
+    text-transform: uppercase;
+}
+
+h1,
+h3,
+p {
+    margin: 0;
+}
 h1 {
-    font-size: 5rem;
-    font-weight: 300;
-    margin: 0;
-    padding: 1rem;
-}
-h2 {
-    font-size: 3rem;
-    font-weight: 200;
-    margin: 0;
-    padding: 1rem;
-    max-width: 80%;
-}
-
-.footer {
-    background-color: #48418e;
-    color: white;
-    display: flex;
-    justify-content: center;
-}
-.sub-navigation {
-    margin: 0;
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-
-.sub-navigation1 {
-    background-color: #48418e;
-    border-radius: 5%;
-    border: white solid 1px;
-    color: white;
-    margin: 1rem 2rem;
-    overflow: ;
-}
-
-.sub-navigation1:hover {
-    background-color: transparent;
-    border: white solid 0.1px;
-}
-
-.sub-navigation2 {
-    border-radius: 5%;
-    border: white solid 1px;
-    color: white;
-    margin: 1rem 2rem;
-}
-.sub-navigation2:hover {
-    background-color: #48418e;
-    border: 0;
-}
-img {
-    width: 10%;
-    height: 10%;
-    padding-top: 2rem;
-}
-.sub {
-    display: flex;
-    flex-direction: column;
+    font-weight: 400;
+    font-size: 2rem;
 }
 
 h3 {
     color: #48418e;
-    font-size: 1rem;
-    word-wrap: break-word;
 }
 
-p {
-    font-size: 1rem;
+.header {
+    display: flex;
+    line-height: normal;
 }
-.travel,
-.chat,
-.experience {
+
+.header ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header li {
+    padding: 0.5rem;
+    flex-basis: 50%;
+}
+
+.header a {
+    color: #48418e;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding: 0.5rem;
+}
+
+.header a:hover {
+    background-color: #25133d;
+    color: white;
+}
+
+.main {
+    background-image: url(images/pozadi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px black;
+    padding: 1rem;
+}
+
+.main p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 0 0 1rem 0;
+}
+
+.main li {
+    margin-bottom: 1.5rem;
+}
+.main a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 100;
+    padding: 0.5rem 2rem;
+}
+
+.main img {
+    display: none;
+}
+
+.mainnav_1 {
+    background-color: #48418e;
+    border-radius: 5%;
+    border: 1px white solid;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+}
+.mainnav_1:hover {
+    background-color: transparent;
+    border: none;
+}
+
+.mainnav_2 {
+    background-color: transparent;
+    border-radius: 5%;
+    border: 1px white solid;
+    font-size: 0.8rem;
+}
+
+.mainnav_2:hover {
+    background-color: #48418e;
+    border: none;
+}
+
+img {
+ width: 10%;
+ height: 10%;
+ margin: 1rem;
+}
+
+.subsection {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem 1rem 2rem 1rem;
 }
-ul {
-    padding-left: 0;
-    margin: 0;
+
+
+footer {
+    background-color: #48418e;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
 }
+
 @media screen and (min-width: 480px) {
-    .sub {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
+
+    .header ul {
+        display: flex;     
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }   
+    .header a {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 3.2rem;
     }
 
-    .travel,
-    .chat,
-    .experience {
-        padding: 2rem;
+    .main p {
+        font-size: 2.2rem;
+        margin: 0 0 2rem 0;
+    }
+    .main ul {
+        display: flex;
+    }
+
+    .main li {
+        margin-right: 1rem;
+    }
+    .main a {
+        padding: 0.5rem 1.3rem;
+        font-size: 1rem;
+    }
+    
+    .subsection { 
+        display: flex;
+    }
+
+    .subsection p {
+        padding: 0 1rem;
     }
 
     img {
-        width: 30%;
-        height: 30%;
-    }
-    .sub-navigation {
-        display: flex;
-        flex-direction: row;
-    }
-    .header-navigation {
-        display: flex;
-        flex-direction: row;
+        height: 15%;
+        width: 15%; 
     }
 }
 
-@media screen and (min-width: 640px) {
+
+@media screen and (min-width:750px) {
     .main {
-        background-image: url(images/pozadi.jpg), url(images/telefon.png);
-        background-repeat: no-repeat;
-        background-position: left, right;
-        background-blend-mode: hue;
-        background-size: cover, 30%;
+        position: relative;
+    }
+    .main img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: auto;
+        margin: 0;
+    }
+
+    .main p {
+        width: 500px;
     }
 }
+@media screen and (min-width: 860px) {
+    h1 {
+        font-size: 4.5rem;
+        font-weight: 500;
+    }
+    .main {
+        position: relative;
+    }
+
+    .main img {
+        display: block;
+
+        
+    }
+    .main p {
+        font-size: 2.5rem;
+    }
+
+    .main a {
+        font-size: 1.5rem;
+        padding: 0.5rem 2rem;
+    }   
+    img {
+        height: 20%;
+        width: 20%; 
+    }
+
+
+}
+
+
